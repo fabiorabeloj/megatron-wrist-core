@@ -1,0 +1,14 @@
+{
+  "name": "megatron-wrist-core",
+  "version": "0.1.0-dev",
+  "private": true,
+  "description": "A standalone command-interface prototype with visual session states.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/policy.test.mjs tests/session.test.mjs tests/demo.test.mjs"
+  },
+  "license": "UNLICENSED"
+}

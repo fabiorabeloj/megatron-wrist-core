@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Protótipo de comandos por texto e voz com estados visuais e fila simulada.">
+  <title>Wrist Core · Protótipo</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">MEGATRON · PROTÓTIPO</p>
+      <h1>Wrist Core</h1>
+      <p class="lead">Experimente comandos por texto ou voz e acompanhe cada estado da sessão.</p>
+    </header>
+    <section class="stage" aria-label="Estados da sessão">
+      <div id="orb" class="orb" data-state="sleeping">
+        <div class="orb-core"></div>
+        <div class="orb-ring"></div>
+        <div class="orb-ring delay"></div>
+        <p data-orb-label>DORMINDO</p>
+      </div>
+      <p id="reply" class="reply" role="status" aria-live="polite">Pronto para experimentar.</p>
+      <p id="transcript" class="transcript">—</p>
+    </section>
+    <section class="controls" aria-labelledby="commands-title">
+      <h2 id="commands-title">Experimente por texto</h2>
+      <form id="command-form">
+        <label for="command">Comando</label>
+        <input id="command" type="text" maxlength="550" autocomplete="off"
+          placeholder="status, fila ou anota revisar documentação" required>
+        <div class="actions"><button id="send-command" type="submit">Experimentar</button></div>
+      </form>
+      <p class="hint">A fila é uma simulação em memória. Recarregar a página apaga as anotações.</p>
+      <label class="check"><input id="dry-run" type="checkbox" checked> Simular sem adicionar à fila</label>
+    </section>
+    <section class="controls" aria-labelledby="voice-title">
+      <h2 id="voice-title">Voz opcional</h2>
+      <p id="voice-privacy" class="hint">O navegador pode enviar áudio ao serviço de reconhecimento de voz dele. Ative somente se concordar. Use texto para experimentar sem microfone.</p>
+      <label class="check"><input id="mic-toggle" type="checkbox" aria-describedby="voice-privacy"> Ativar microfone</label>
+      <div class="actions"><button id="listen" type="button" disabled>Ouvir um comando</button></div>
+      <p id="hint" class="hint">Microfone desligado. Os comandos estão em português.</p>
+    </section>
+    <aside>Esta demo interpreta <strong>status</strong>, <strong>fila</strong> e <strong>anota</strong>. Nenhuma integração executa tarefas, aprova pedidos ou envia mensagens.</aside>
+  </main>
+  <script type="module" src="./src/app.mjs"></script>
+</body>
+</html>
