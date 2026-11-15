@@ -13,4 +13,4 @@ Use synthetic commands and examples. Do not add real conversations, school recor
 
 Please discuss new network, storage, hardware or LLM integrations before implementing them; they change the prototype's scope.
 
-Distribution rights are pending confirmation. Until an open-source license is approved, this package is for review and no general license to redistribute is granted.
+By contributing, you agree that your contributions are licensed under the [MIT License](LICENSE).

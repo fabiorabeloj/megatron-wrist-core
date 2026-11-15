@@ -1,7 +1,11 @@
 # MEGATRON Wrist Core
+[![Test](https://github.com/fabiorabeloj/megatron-wrist-core/actions/workflows/ci.yml/badge.svg)](https://github.com/fabiorabeloj/megatron-wrist-core/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A small **command-interface prototype** with a visual session state machine, optional browser speech input, and an in-memory queue.
 
 Extracted from the FabioOS workspace as a focused, standalone demonstration. It currently simulates responses; it is an early prototype.
+
+![Wrist Core interface](docs/screenshot.png)
 
 [Português](docs/README.pt-BR.md) · [Architecture](docs/ARCHITECTURE.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
 
@@ -32,7 +36,7 @@ Browser speech recognition may send audio to the browser vendor's service. Offli
 node --test tests/policy.test.mjs tests/session.test.mjs tests/demo.test.mjs
 python -m unittest discover -s tests -p "test_*.py"
 ```
-`node --test tests/policy.test.mjs tests/session.test.mjs tests/demo.test.mjs` runs Node's built-in test runner; `npm install` is unnecessary. The workflow is configured to test Node 22/24 on Ubuntu and Windows, with Python 3.12. Remote CI has not run before publication.
+`node --test tests/policy.test.mjs tests/session.test.mjs tests/demo.test.mjs` runs Node's built-in test runner; `npm install` is unnecessary. GitHub Actions runs the suite on Node 22 and 24, on Ubuntu and Windows, with Python 3.12.
 
 ## Scope
 The demo interprets a small set of phrases and displays session states. It has no gateway, API proxy, persistent storage, LLM, hardware connection, or task executor. Its command policy is an interface convention, not a security boundary for real systems.
@@ -43,4 +47,4 @@ The demo interprets a small set of phrases and displays session states. It has n
 - Define a separately reviewed adapter contract before any real integration.
 
 ## License and provenance
-This review package has no open-source license yet. See [COPYRIGHT.md](COPYRIGHT.md). A license will be selected after authorship and distribution rights are confirmed. No third-party assets from the FabioOS vault are included.
+[MIT](LICENSE). Adapted from the author's private FabioOS workspace; no third-party assets from it are included. See [COPYRIGHT.md](COPYRIGHT.md).

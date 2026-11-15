@@ -24,4 +24,4 @@ python -m unittest discover -s tests -p "test_*.py"
 ## Limites
 Fila fictícia, interpretação limitada de frases e nenhuma execução de tarefas. Não há conexão com MEGATRON real, WhatsApp, n8n, LLM ou relógio. A política de comandos não substitui segurança em uma integração real.
 
-A licença ainda está em definição. Consulte [COPYRIGHT.md](../COPYRIGHT.md).
+Licença [MIT](../LICENSE). Consulte também [COPYRIGHT.md](../COPYRIGHT.md).
